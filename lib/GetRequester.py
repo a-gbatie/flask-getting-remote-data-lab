@@ -11,4 +11,5 @@ class GetRequester:
     return res.text # grab the response body as a string
 
   def load_json(self):
-      pass
+    res = self.get_response_body() # retrieves JSON string from API
+    return json.loads(res) # converts that string into Python object
